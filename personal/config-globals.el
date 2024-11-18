@@ -6,3 +6,6 @@
 
 ;; Remove prelude whitespace mode
 (setq prelude-whitespace nil)
+
+;; Remove prelude flyspell
+(setq prelude-flyspell nil)
