@@ -3,3 +3,6 @@
 
 ;; Remove comp warnings
 (setq native-comp-async-report-warnings-errors nil)
+
+;; Remove prelude whitespace mode
+(setq prelude-whitespace nil)
