@@ -1,9 +1,13 @@
 ;; Code:
 
 
+(prelude-require-packages '(prettier))
+
 (require 'prelude-lsp)
 
 (defun my--init-ts-mode ()
+  (prettier-mode)
+  (lsp-deferred)
   (setq lsp-enable-indentation nil)
   (setq typescript-indent-level 2))
 
@@ -14,5 +18,3 @@
 
 (add-hook 'typescript-ts-mode-hook 'my--init-ts-mode)
 (add-hook 'tsx-ts-mode-hook 'my--init-ts-mode)
-(add-hook 'typescript-ts-mode-hook #'lsp-deferred)
-(add-hook 'tsx-ts-mode-hook #'lsp-deferred)
